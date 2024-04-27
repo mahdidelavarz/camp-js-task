@@ -102,7 +102,9 @@ function renderActionsInDom(data) {
     transactions.classList.add("transactions");
     transactions.innerHTML = `
         <td class="w-80 py-8 flex justify-center border-b">${item.id}</td>
-        <td class="w-80 py-8 flex justify-center border-b">${item.type}</td>
+        <td class="w-80 py-8 flex justify-center border-b ${
+          item.type === "افزایش اعتبار" ? "text-green-500" : "text-red-500"
+        }">${item.type}</td>
         <td class="w-80 py-8 flex justify-center border-b">${item.price}</td>
         <td class="w-80 py-8 flex justify-center border-b">${item.refId}</td>
         <td class="w-80 py-8 flex justify-center border-b">${new Date(
